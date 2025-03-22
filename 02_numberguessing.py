@@ -1,12 +1,16 @@
 import random
 
-secretnum = random.randint(1,5)
+secretnum = random.randint(1,10)
+attempts = 3
 
-guess = int(input("Guess a number between 1 and 10:"))
+while attempts > 0:
+     guess = int(input("\nGuess a number ({attempts} left):"))
 
-if(guess == secretnum):{
+if(guess == secretnum):
     print("You guessed the number!")
-}
-else:{
-    print("Incorrect! Guess another number")
-}
+    break
+
+    elif guess < secretnum:
+        print("guess higher! Try again.")
+else:
+    print("Guess lower! Try again.")
