@@ -1,0 +1,8 @@
+import random
+import string
+
+letters = string.ascii_letters #a-z A-Z
+numbers = string.digits #0-9
+symbols = string.punctuation #special characters
+
+all_chars = letters + numbers + symbols
