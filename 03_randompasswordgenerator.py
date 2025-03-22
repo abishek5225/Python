@@ -6,3 +6,7 @@ numbers = string.digits #0-9
 symbols = string.punctuation #special characters
 
 all_chars = letters + numbers + symbols
+
+length = int(input("Enter the length of your password:"))
+
+password
