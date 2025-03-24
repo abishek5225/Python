@@ -8,4 +8,7 @@ while True:
     dice=random.randint(1,6)
     print(f"You rolled:{dice}")
 
-    choice = input
+    choice = input("Roll again?(yes/no)").lower()
+
+    if choice != "yes":
+        print("Thanks for playing")
