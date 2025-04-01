@@ -1,1 +1,1 @@
-seeing python basics for  AI and ML stuffs
+seeing python basics 
