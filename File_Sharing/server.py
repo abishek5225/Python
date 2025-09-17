@@ -8,10 +8,16 @@ print("Server is listening")
 
 client_socket, client_address = server_socket.accept()
 print(f"connected to {client_address}")
-data = client_socket.recv(1024).decode()
-print("client messege: ", data)
 
-client_socket.send("Hello from Server!".encode())
+filename = client_socket.recv(1024).decode()
+print(f"Receiving file: {filename}")
 
+with open("received_"+ filename, "wb") as f:
+    while True:
+        data = client_socket.recv(1024)
+        if not data:
+            break
+        f.write(data)
+print("File received successfully!")
 client_socket.close()
 server_socket.close()
