@@ -13,3 +13,5 @@ print("client messege: ", data)
 
 client_socket.send("Hello from Server!".encode())
 
+client_socket.close()
+server_socket.close()
