@@ -19,6 +19,6 @@ with open(filename, "rb") as f:
 
 
 
-print("Received from server:", data)
+print("file sent successfully")
 
 client_socket.close()
