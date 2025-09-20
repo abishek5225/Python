@@ -5,12 +5,16 @@ client_socket.connect(("127.0.0.1", 12345))
 
 
 filename= "testfile.txt"
-client_socket.send(filename)
+client_socket.send(filename.encode())
 
 #acknowledgement
 ack = client_socket.recv(1024).decode()
 print("Server: ", ack)
 
+with open(filename, "rb") as f:
+    data= f.read(1024)
+    while data:
+        
 
 data = client_socket.recv(1024).decode()
 print("Received from server:", data)
