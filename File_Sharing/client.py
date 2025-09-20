@@ -14,9 +14,11 @@ print("Server: ", ack)
 with open(filename, "rb") as f:
     data= f.read(1024)
     while data:
-        
+        client_socket.send(data)
+        data=f.read(1024)
 
-data = client_socket.recv(1024).decode()
+
+
 print("Received from server:", data)
 
 client_socket.close()
