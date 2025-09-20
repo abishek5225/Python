@@ -8,6 +8,9 @@ filename= "testfile.txt"
 client_socket.send(filename)
 
 #acknowledgement
+ack = client_socket.recv(1024).decode()
+print("Server: ", ack)
+
 
 data = client_socket.recv(1024).decode()
 print("Received from server:", data)
